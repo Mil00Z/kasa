@@ -23,6 +23,7 @@
   cursor:pointer;
 }
 
+
 .card-link {
   margin-top:auto;
   text-decoration: unset;
@@ -30,9 +31,10 @@
 }
 
 .card-title{
-  margin-block:.5rem 0;
+  margin-block:auto 0;
   font-size:1.2rem;
   color: var(--white-color);
+  transition: var(--regTransi);
 }
 .card-img{
   width:100%;
@@ -57,3 +59,4 @@
   background: var(--primary-color);
   transition: var(--regTransi);
 }
+
