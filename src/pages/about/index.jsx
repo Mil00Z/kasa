@@ -6,6 +6,7 @@ import "@pages/about/about.css"
 
 const About = () => {
 
+
 return(
   <>
     <HeroBanner layout={'about'}/>

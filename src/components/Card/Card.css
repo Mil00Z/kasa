@@ -23,7 +23,15 @@
   cursor:pointer;
 }
 
+<<<<<<< HEAD
 
+=======
+.card.booked{
+
+  background:red;
+
+}
+>>>>>>> 5fc46af01f54f223c8dbf397d29191b8042b42b2
 .card-link {
   margin-top:auto;
   text-decoration: unset;
