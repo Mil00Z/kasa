@@ -14,7 +14,7 @@ const Listing = () => {
   <>
   <section className="listing-section">
 
-  <h3 className="main-title"><span className='free-spaces'>{ `${freeSpaces}`}</span> logements disponibles ({logements.length})</h3>
+  <h3 className="main-title"><span className='free-spaces'>{ `${freeSpaces}`}</span> logements encore disponibles ({logements.length})</h3>
 
     <div className="listing-container">
 
