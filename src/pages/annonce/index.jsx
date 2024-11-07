@@ -1,5 +1,5 @@
 
-import {useParams,Link} from 'react-router-dom'
+import {useParams,useOutletContext, Link} from 'react-router-dom'
 import HeroBanner from "@components/Hero/Hero"
 import Product from "@components/Product/Product"
 
@@ -7,10 +7,14 @@ import logements from '@data/logements.json'
 
 import '@pages/annonce/annonce.css'
 
+
+
 const Annonce = () => {
 
-  let getParams = useParams();
+  const {bookings, setBookings,isBooked,setIsBooked} = useOutletContext();
 
+
+  let getParams = useParams();
 
   //Testing Injection on ONE logement
   // let details = logements[2];
@@ -30,7 +34,7 @@ const Annonce = () => {
     (<>
       <HeroBanner layout={'annonce'} details={details} />
       <section className="logement-details">
-        <Product details={details} fullPanel={fullPanel} />
+        <Product details={details} fullPanel={fullPanel} bookings={bookings} setBookings={setBookings} isBooked={isBooked} setIsBooked={setIsBooked} />
       </section>
     </>
   ) : (
