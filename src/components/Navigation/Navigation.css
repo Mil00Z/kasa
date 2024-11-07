@@ -8,11 +8,14 @@
 
 .nav-link{
   color:var(--black-color);
-  font-size:1.2rem;
+  font-size:1.5rem;
+  font-weight:var(--weight-medium);
   position: relative;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:is(.active) {
+  color: var(--third-color);
   text-decoration: underline;
   text-decoration-thickness: 2px;
 }

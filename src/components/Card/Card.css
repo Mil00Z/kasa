@@ -23,15 +23,6 @@
   cursor:pointer;
 }
 
-<<<<<<< HEAD
-
-=======
-.card.booked{
-
-  background:red;
-
-}
->>>>>>> 5fc46af01f54f223c8dbf397d29191b8042b42b2
 .card-link {
   margin-top:auto;
   text-decoration: unset;
@@ -40,7 +31,8 @@
 
 .card-title{
   margin-block:auto 0;
-  font-size:1.2rem;
+  font-size:1.15rem;
+  font-weight: var(--weight-bold);
   color: var(--white-color);
   transition: var(--regTransi);
 }

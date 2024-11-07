@@ -4,15 +4,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: auto;;
-  padding:2.5rem 1rem;
+  margin-top: auto;
+  padding:3rem 1rem;
   background:var(--black-color);
 }
 
 .copyright{
-  font-size:1.35rem;
+  font-size:1.5rem;
+  font-weight:var(--weight-medium);
   color:var(--white-color);
-  margin-block: 1rem 0;
+  margin-block: 2.5rem 0;
   
 }
 
