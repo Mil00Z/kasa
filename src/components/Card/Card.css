@@ -23,7 +23,11 @@
   cursor:pointer;
 }
 
+.card.booked{
 
+  background:red;
+
+}
 .card-link {
   margin-top:auto;
   text-decoration: unset;
