@@ -1,4 +1,4 @@
-import { StrictMode } from 'react'
+import { StrictMode} from 'react'
 import { createRoot } from 'react-dom/client'
 import {
   createBrowserRouter,
@@ -10,6 +10,7 @@ import About from '@pages/about/index.jsx';
 import Surprise from '@pages/surprise/index.jsx';
 import Annonce from '@pages/annonce/index.jsx';
 import PageNotFound from '@pages/notfound/index.jsx';
+
 
 
 const router = createBrowserRouter([

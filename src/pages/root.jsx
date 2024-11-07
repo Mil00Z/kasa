@@ -1,11 +1,16 @@
 import {Outlet,useLocation} from 'react-router-dom'
-import { useEffect } from 'react';
+import { useEffect,useState } from 'react';
+import logements from '@data/logements.json';
 import Header from "@components/Header/Header"
 import Footer from "@components/Footer/Footer"
 
 import '@root/styles.css'
 
 const Root = () => {
+
+  const [bookings, setBookings] = useState(logements.length);
+
+  const [isBooked, setIsBooked] = useState(false);
 
   let location = useLocation();
   
@@ -25,14 +30,26 @@ const Root = () => {
     
     target.classList.add(currentLocation);
 
-  },[currentLocation])
+  },[currentLocation]);
+
+
+  useEffect(() => {
+
+    if(bookings !== logements.length) {
+
+      document.title = `Un nouveau logement a été réservé ! ${bookings} restants`;
+    }
+
+    
+  },[bookings]);
 
   
+
   return (
   <>
-   <Header />
+   <Header bookings={bookings} setBookings={setBookings} />
     <main className="content-first skeleton">
-    <Outlet />
+    <Outlet context={{logements,bookings,setBookings,isBooked,setIsBooked}} />
     </main>
     <Footer />
   </>  )

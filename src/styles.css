@@ -118,12 +118,16 @@ button:focus-visible {
 }
 
 .btn-cta{
-  width:100px;
+  width:fit-content;
   background-color: var(--third-color);
   color:var(--white-color);
+  transition: var(--regTransi);
 }
+
 .btn-cta:hover {
-  width:150px;
+  /* width:150px; */
+  border-color: currentColor;
+  background:var(--black-color)
 }
 
 @media (prefers-color-scheme: light) {
