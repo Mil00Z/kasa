@@ -11,6 +11,7 @@ const Root = () => {
   const [bookings, setBookings] = useState(logements.length);
 
   const [isBooked, setIsBooked] = useState(false);
+  
 
   let location = useLocation();
   
@@ -47,9 +48,9 @@ const Root = () => {
 
   return (
   <>
-   <Header bookings={bookings} setBookings={setBookings} />
+   <Header />
     <main className="content-first skeleton">
-    <Outlet context={{logements,bookings,setBookings,isBooked,setIsBooked}} />
+      <Outlet context={{logements,bookings,setBookings,isBooked,setIsBooked}} />
     </main>
     <Footer />
   </>  )

@@ -16,7 +16,7 @@ const {details,softkill,fullPanel} = props
         </p>
       </div>
       <div className="product-panel tube" >
-          <h3 className='title'>Equipements <i class="fa-solid fa-angle-up"></i></h3>
+          <h3 className='title'>Equipements <i className="fa-solid fa-angle-up"></i></h3>
           <ul className='panel-container'>
           {details.equipments.map((equipement,index)=>{
 

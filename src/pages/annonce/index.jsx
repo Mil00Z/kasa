@@ -3,7 +3,7 @@ import {useParams,useOutletContext, Link} from 'react-router-dom'
 import HeroBanner from "@components/Hero/Hero"
 import Product from "@components/Product/Product"
 
-import logements from '@data/logements.json'
+// import logements from '@data/logements.json'
 
 import '@pages/annonce/annonce.css'
 
@@ -11,7 +11,7 @@ import '@pages/annonce/annonce.css'
 
 const Annonce = () => {
 
-  const {bookings, setBookings,isBooked,setIsBooked} = useOutletContext();
+  const {logements, bookings, setBookings,isBooked,setIsBooked} = useOutletContext();
 
 
   let getParams = useParams();

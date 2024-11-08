@@ -162,3 +162,8 @@ border-radius:var(--radius) ;
 .special{
   color:var(--third-color);
 }
+
+.btn-cta.booked{
+  background:var(--grey-color);
+  cursor:not-allowed
+}

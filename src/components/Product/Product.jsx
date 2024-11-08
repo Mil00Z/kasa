@@ -7,6 +7,8 @@ const Product = (props) => {
 
   const {details,fullPanel,bookings,setBookings,isBooked,setIsBooked} = props
 
+  console.log(isBooked);
+
   function updateBooking() {
 
     setIsBooked(true);
@@ -53,7 +55,7 @@ const Product = (props) => {
       </div>
 
           <div className="extra-specs">
-          <button className='btn btn-cta' onClick={() => updateBooking()}> Je réserve !</button>
+          <button className={`btn btn-cta btn-reserve ${isBooked ? 'booked' : ''}`} type="button" onClick={() => updateBooking()} disabled={isBooked}> {`${isBooked ? 'Indisponible' : 'Je réserves !'}`}</button>
           </div>
     </article>
   
