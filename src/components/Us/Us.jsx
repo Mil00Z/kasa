@@ -1,6 +1,6 @@
 import PanelTube from "@components/PanelTube/PanelTube"
 import Form from '@components/Form/Form'
-import './Us.css'
+import './us.css'
 
 const Us = () =>{
 

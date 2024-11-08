@@ -1,6 +1,8 @@
 import {Link} from 'react-router-dom'
-import logo from '@assets/kasa-logo.svg'
+
 import Navigation from '@components/Navigation/Navigation.jsx';
+
+import logo from '@assets/kasa-logo.svg'
 import './Header.css'
  
 const Header = () => {
