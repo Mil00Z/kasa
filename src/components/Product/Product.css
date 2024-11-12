@@ -75,8 +75,21 @@ border-radius:var(--radius) ;
 .side-left{
 
 }
+
 .star{
   align-self: flex-end;
+  margin-block:1rem;
+}
+
+.fa-star {
+  margin-inline:.25rem;
+  color:var(--star-default-color);
+  font-size:1.5rem;
+}
+
+.fa-star.noted{
+
+  color:var(--primary-color);
 }
 
 .side-bottom {

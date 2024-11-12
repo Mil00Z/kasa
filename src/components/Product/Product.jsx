@@ -1,14 +1,15 @@
-
-import PanelTube from '../PanelTube/PanelTube';
-import './Product.css'
+import Notes from '@components/Notes/Notes';
+import PanelTube from '@components/PanelTube/PanelTube';
+import './Product.css';
 
 
 const Product = (props) => {
 
   const {details,fullPanel,bookings,setBookings,isBooked,setIsBooked} = props
 
-  console.log(isBooked);
+  console.log(details.rating);
 
+  
   function updateBooking() {
 
     setIsBooked(true);
@@ -47,7 +48,7 @@ const Product = (props) => {
       </div>
       <div className='side-right'>
         <p className='product-owner'>{details.host.name}<img src={details.host.picture} alt={details.host.name} className='thumbnail'/></p>
-        {details.rating ? (<span className="star">Note : {`${details.rating} / 5`}</span>):'aucunes notes'}
+        <Notes notes={details.rating} />
       </div>
       
       <div className='side-bottom'>
@@ -55,7 +56,8 @@ const Product = (props) => {
       </div>
 
           <div className="extra-specs">
-          <button className={`btn btn-cta btn-reserve ${isBooked ? 'booked' : ''}`} type="button" onClick={() => updateBooking()} disabled={isBooked}> {`${isBooked ? 'Indisponible' : 'Je réserves !'}`}</button>
+            <button className={`btn btn-cta btn-reserve ${isBooked ? 'booked' : ''}`} type="button" onClick={() => updateBooking()} disabled={isBooked}> {`${isBooked ? 'Indisponible' : 'Je réserves !'}`}
+            </button>
           </div>
     </article>
   
