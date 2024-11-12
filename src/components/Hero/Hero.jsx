@@ -8,7 +8,7 @@ const HeroBanner = (props) => {
 
   const {layout, details = null} = props
 
-  
+
   // Display Background Switching Pages Loaded
   let ArrayAsset = [heroBg,heroOtherBg,heroAboutBg];
 
