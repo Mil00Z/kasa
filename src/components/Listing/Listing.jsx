@@ -11,9 +11,7 @@ const Listing = () => {
   
 
   useEffect(() => {
-
-
-
+    
   },[bookings])
   
 
