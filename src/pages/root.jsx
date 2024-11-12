@@ -39,9 +39,10 @@ const Root = () => {
     if(bookings !== logements.length) {
 
       document.title = `Un nouveau logement a été réservé ! ${bookings} restants`;
+    } else if (bookings === 0) {
+       document.title = `Aucuns logements disponibles !`;
     }
 
-    
   },[bookings]);
 
   
