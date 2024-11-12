@@ -28,6 +28,8 @@
   --cta-button-color:var(--white-color);
   --cta-button-weight:600;
   --cta-button-background:var(--main-color);
+
+  --star-default-color:var(--second-color);
   
   --radius:5px;
   --regTransi:all .26s ease-in-out;
@@ -129,6 +131,10 @@ button:focus-visible {
   border-color: currentColor;
   background:var(--black-color)
 }
+
+
+
+
 
 @media (prefers-color-scheme: light) {
   :root {
