@@ -100,57 +100,6 @@ border-radius:var(--radius) ;
   margin-block: 1.5rem;
 }
 
-.tube {
-  padding:.75rem;
-  color:var(--white-color);
-  background:var(--primary-color);
-  border-radius:var(--radius);
-  overflow: hidden;
-}
-
-.tube .title{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-block:0;
-  font-size:1.125rem;
-  font-weight:var(--weight-bold);
-}
-
-.title > i {
-  font-size:2rem;
-  transition: var(--regTransi);
-}
-
-.tube:hover .title > i ,
-.open .title > i {
-  transform: rotateX(.5turn);
-}
-
-.product-panel{
-  /* --height:80px; */
-  height:var(--height);
-  width:45%;
-  transition: height .33s ease-in-out;
-}
-
-@supports(height:calc-size(auto)) {
-
-  .product-panel:hover {
-    height:calc-size(auto);
-  }
-
-}
-.product-panel:hover {
-  /* --height:fit-content */
-}
-
-
-.panel-container{ 
-  margin-block:1rem;
-  font-size:1.125rem;
-  /* transition: height .33s ease-in-out; */
-}
 
 .logement-not-found {
   margin-block:3rem;
