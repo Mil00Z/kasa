@@ -1,6 +1,5 @@
-import HeroBanner from "@components/Hero/Hero"
-import Form from "@components/Form/Form"
-import Us from "@components/Us/Us"
+import HeroBanner from "@components/Hero/Hero";
+import Us from "@components/Us/Us";
 
 import "@pages/about/About.css"
 
