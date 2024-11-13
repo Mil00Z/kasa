@@ -1,21 +1,47 @@
+import { useRef,useEffect } from 'react'
 import './PanelTube.css'
 
 const PanelTube = (props) => {
 
-const {details,softkill,fullPanel} = props
+const {details,title,description,annoncePanel} = props
 
-// console.log(fullPanel);
+const contentRef = useRef(null);
+
+
+
+function handleClick(event) {
+
+  let target = event.target;
+  let targetClass = target.closest('.tube');
+  let container = targetClass.querySelector('.panel-container');
+
+ 
+  // contentRef.current = container ;
+
+  // Shorthand to check existence
+  if (targetClass && container) {
+
+    let maxHeight = container.scrollHeight;
+
+    container.style.setProperty('--max-height',`${maxHeight}px`);
+  
+    targetClass.classList.toggle('reversed');
+
+  }
+
+ 
+}
 
   return (
-    fullPanel ? (
+    annoncePanel ? (
     <>
-      <div className='product-panel tube'>
+      <div className='product-panel tube' onClick={() => handleClick(event)}>
         <h3 className='title'>Description <i className="fa-solid fa-angle-up"></i></h3>
-        <p className='panel-container'>
-          {details.description}
+        <p className='panel-container' >
+            {details.description}
         </p>
       </div>
-      <div className="product-panel tube" >
+      <div className="product-panel tube" onClick={ () => handleClick(event)}>
           <h3 className='title'>Equipements <i className="fa-solid fa-angle-up"></i></h3>
           <ul className='panel-container'>
           {details.equipments.map((equipement,index)=>{
@@ -26,8 +52,13 @@ const {details,softkill,fullPanel} = props
             }
           </ul>
       </div>
-    </>) : (<div className='soft-skill tube'>
-          <h3 className='title' data-ui="no description">{softkill} <i className="fa-solid fa-angle-up"></i></h3>
+    </>) : (<div className='soft-skill tube' onClick={ () => handleClick(event)}>
+  
+          <>
+            <h3 className='title'>{title} <i className="fa-solid fa-angle-up"></i></h3>
+            <p className='panel-container' ref={contentRef}>{description}</p>
+          </>
+          
         </div>)
   )
 }
