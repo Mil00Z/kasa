@@ -10,7 +10,6 @@ const Annonce = () => {
 
   const {logements, bookings, setBookings,isBooked,setIsBooked} = useOutletContext();
 
-
   let getParams = useParams();
 
   //Testing Injection on ONE logement
@@ -23,7 +22,7 @@ const Annonce = () => {
 
   })
   
-  let fullPanel = true ;
+  let annoncePanel = true ;
 
   return (
 
@@ -31,7 +30,7 @@ const Annonce = () => {
     (<>
       <HeroBanner layout={'annonce'} details={details} />
       <section className="logement-details">
-        <Product details={details} fullPanel={fullPanel} bookings={bookings} setBookings={setBookings} isBooked={isBooked} setIsBooked={setIsBooked} />
+        <Product details={details} annoncePanel={annoncePanel} bookings={bookings} setBookings={setBookings} isBooked={isBooked} setIsBooked={setIsBooked} />
       </section>
     </>
   ) : (

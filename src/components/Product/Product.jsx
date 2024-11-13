@@ -5,7 +5,7 @@ import './Product.css';
 
 const Product = (props) => {
 
-  const {details,fullPanel,bookings,setBookings,isBooked,setIsBooked} = props
+  const {details,annoncePanel,bookings,setBookings,isBooked,setIsBooked} = props
 
   console.log(details.rating);
 
@@ -52,7 +52,7 @@ const Product = (props) => {
       </div>
       
       <div className='side-bottom'>
-        <PanelTube details={details} fullPanel={fullPanel}/>
+        <PanelTube details={details} annoncePanel={annoncePanel}/>
       </div>
 
           <div className="extra-specs">
