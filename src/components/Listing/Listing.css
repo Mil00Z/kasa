@@ -19,6 +19,7 @@
 
 .main-title{
   margin-block:0 var(--spacing);
+  font-size:var(--title-font-size);
 }
 
 .free-spaces{
