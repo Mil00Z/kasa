@@ -1,8 +1,8 @@
 .tube {
-  --padding-tube:.75rem;
+  --padding-tube:.85rem;
   color:var(--white-color);
   border-radius:var(--radius);
-  background-color: var(--white-color);
+  background-color: #F6F6F6;
   overflow: hidden;
 }
 
@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block:0;
+  margin-block:0 var(--padding-tube);
   padding: var(--padding-tube);
   font-size:1.125rem;
   font-weight:var(--weight-bold);
@@ -38,7 +38,8 @@
 
 .panel-container{ 
   max-height:0;
-  margin-block:.5rem;
+  /* margin-block:.5rem; */
+  margin-block:0;
   font-size:1.125rem;
   color:var(--black-color);
   padding-inline:var(--padding-tube);
