@@ -1,6 +1,8 @@
 
 import {useParams,useOutletContext, Link} from 'react-router-dom'
+
 import HeroBanner from "@components/Hero/Hero"
+import Gallery from "@components/Gallery/Gallery"
 import Product from "@components/Product/Product"
 
 import '@pages/annonce/annonce.css'
@@ -28,9 +30,9 @@ const Annonce = () => {
 
     details ? 
     (<>
-      <HeroBanner layout={'annonce'} details={details} />
+      <Gallery layout={'annonce'} details={details} />
       <section className="logement-details">
-        <Product details={details} annoncePanel={annoncePanel} bookings={bookings} setBookings={setBookings} isBooked={isBooked} setIsBooked={setIsBooked} />
+          <Product details={details} annoncePanel={annoncePanel} bookings={bookings} setBookings={setBookings} isBooked={isBooked} setIsBooked={setIsBooked} />
       </section>
     </>
   ) : (
