@@ -7,8 +7,6 @@ const Product = (props) => {
 
   const {details,annoncePanel,bookings,setBookings,isBooked,setIsBooked} = props
 
-  console.log(details.rating);
-
   
   function updateBooking() {
 
