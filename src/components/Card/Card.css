@@ -1,6 +1,6 @@
 .card{
   --radius:10px;
-  --sizes:350px;
+  --sizes:325px;
   width:var(--sizes);
   height: var(--sizes);
   display: flex; 

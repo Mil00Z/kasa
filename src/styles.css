@@ -43,7 +43,7 @@
 
   body {
     --layout:"Desk";
-    --skeleton:1240px;
+    --skeleton:90%;
     font-family:var(--body-font-family);
     font-size:var(--body-font-size);
     font-weight:var(--body-font-weight);
@@ -136,18 +136,37 @@ button:focus-visible {
 
 
 /* MEDIA QUERIES */
-@media all and (min-width:1300px){
-  body {
-    --layout:"Large-Desk";
-    --skeleton:90%;
-  }
-}
 
-@media all and (max-width:1000px){
+@media all and (max-width:1100px){
+
   body {
     --layout:"Tab";
-    --skeleton:960px;
+    --skeleton:90%;
   }
+
+  /* NAV */
+  .nav-link {
+    font-size: .9rem;
+  }
+
+  .nav-link:nth-of-type(2) {
+    display: none;
+  }
+
+  /* HERO */
+  .content-first .hero .title {
+    font-size: 2rem;
+  }
+
+   /* HOME */
+   .content-first .card {
+    --sizes:290px;
+  }
+
+  .content-first .card-description {
+    font-size:1.05rem;
+ }
+
 }
 
 
@@ -169,24 +188,39 @@ button:focus-visible {
   }
 
   /* NAV */
-  .nav-link {
+  /* .nav-link {
     font-size: .9rem;
-  }
-  .nav-link:nth-of-type(2) {
-    display: none;;
-  }
+  } */
+
+  /* .nav-link:nth-of-type(2) {
+    display: none;
+  } */
 
   /* HERO */
   .content-first .hero {
-    height:120px;
+    --radius:10px;
+    height:130px;
   }
 
   .content-first .hero .title {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
-  
 
+  /* HOME */
+  .content-first .listing-container {
+    justify-content: center;
+  }
+
+  .content-first .card-description {
+    font-size:1.2rem;
+ }
+
+  
   /* FOOTER */
+  .banner-footer{
+    padding-block:4rem;
+  }
+
   .copyright {
     font-size: .8rem;
   }
@@ -196,8 +230,13 @@ button:focus-visible {
     font-size:1.25rem;
   }
 
-  .logement .product-location{
+  .logement .product-name.is-booked{
     font-size:.875rem;
+  }
+
+  .logement .product-location{
+    margin-top:.75rem;
+    font-size:.95rem;
   }
 
   .logement .tag {
@@ -222,23 +261,60 @@ button:focus-visible {
      flex-wrap: wrap;
   }
 
+  .logement .product-name {
+    display: flex;
+    flex-direction: column;
+  }
+
   .logement .product-panel {
-    width:100%;
     margin-bottom: calc(2 * var(--padding-tube));
   }
 
   .logement .product-owner{
-    font-size:12px;
+    font-size:.813rem;
   }
 
-  .logement .product-panel > .title {
-    --padding-tube:.5rem;
-    font-size:13px;
+  .logement .product-owner .thumbnail{
+    --sizes:45px;
   }
 
-  .logement .panel-container {
-    font-size:13px;
+
+  /* TUBE */
+  .content-first .tube {
+    width:100%;
   }
 
+  .content-first .tube > .title {
+    --padding-tube:.35rem;
+    font-size:.813rem;
+  }
+
+  .content-first .tube .panel-container {
+    --extraSpacing:2rem;
+    font-size:.813rem;
+  }
+
+  .content-first .tube .title > i {
+    font-size:1.5rem;
+  }
+
+  /* 404 */
+  .content-first .not-found-container {
+    --gap:4rem;
+    margin-top: var(--gap);
+  }
+  .content-first .not-found-container .title {
+    font-size:8rem;
+  }
+
+  .content-first .not-found-container .description {
+    font-size: 1.25rem;
+    text-align: center;
+    text-wrap:balance;
+  }
+
+  .content-first .not-found-container .link {
+    font-size:1rem;
+  }
 
 }
