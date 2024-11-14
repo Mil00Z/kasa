@@ -1,4 +1,6 @@
-import { useState,useEffect, useRef } from 'react';
+import { useState,useEffect,useRef } from 'react';
+
+import Fade from '@components/utils/fade.jsx';
 import '@components/Hero/Hero.css';
 import '@components/Gallery/Gallery.css';
 
@@ -7,6 +9,7 @@ const Gallery = (props) => {
   const {layout, details = null} = props
 
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
+  const [isVisible, setVisible] = useState(true);
 
   const imageRef = useRef(null);
 
@@ -24,9 +27,8 @@ const Gallery = (props) => {
       setCurrentImgIndex(currentImgIndex + 1)
     }
 
-    console.log(currentImgIndex,pictures.length);
 
-
+    setVisible(isVisible => !isVisible)
   }
 
   function goBack() {
@@ -40,6 +42,8 @@ const Gallery = (props) => {
       setCurrentImgIndex(currentImgIndex - 1)
     }
 
+
+    setVisible(isVisible => !isVisible)
   }
 
 
@@ -52,25 +56,25 @@ const Gallery = (props) => {
 
 
 return (
-<>
-  <section className="gallery">
 
+  <section className="gallery">
+  
     <div className="nav-pictures">
       <span className="nav-icon left" onClick={() => goBack()}>Left</span>
       <span className="nav-icon right" onClick={() => goAhead()}>Right</span>
     </div>
     
-    <img key={`picture-${currentImgIndex}`} src={pictures[currentImgIndex]} className={`picture`} data-index={currentImgIndex} alt={`photo de l'annonce - ${details.title}`} ref={imageRef} />
+    <Fade isVisible={isVisible}>
 
+      <img key={`picture-${currentImgIndex}`} src={pictures[currentImgIndex]} className={`picture`} data-index={currentImgIndex} alt={`photo de l'annonce - ${details.title}`} /> 
+
+    </Fade>
+      
     <div className="nav-counter"> <span className="counter">{currentImgIndex}</span>/{pictures.length - 1}</div>
-  </section>
- 
 
-</>
-     
+  </section>
 
 )
-
 
 }
 export default Gallery

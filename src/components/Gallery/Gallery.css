@@ -17,7 +17,7 @@
   height: 100%;
   object-fit: cover;
   opacity: var(--op);
-  transition: opacity .12s ease-in-out;
+  /* transition: opacity .12s ease-in-out; */
 }
 
 .picture.pschit {
@@ -67,4 +67,13 @@
 .counter {
   font-size:1.3rem;
   color:var(--third-color);
+}
+
+.fade {
+  width: 100%;
+  transition:var(--regTransi)
+}
+
+.fade-in {
+  opacity: 1;
 }
