@@ -23,8 +23,11 @@
   color:var(--primary-color);
 }
 
+
 .product-location {
-  font-size:1.125rem;
+  display: inline-block;
+  font-size:1,125rem;
+  font-weight: var(--weight-medium);
   color:var(--black-color)
 }
 
@@ -51,6 +54,7 @@ border-radius:var(--radius) ;
   justify-content: space-around;
   align-items: center;
   column-gap: var(--gap);
+  font-weight: var(--weight-medium);
   color:var(--primary-color);
 }
 
@@ -108,6 +112,7 @@ border-radius:var(--radius) ;
 .logement-not-found .title {
   margin-block:1rem;
   font-size:1.5rem;
+  font-weight: var(--weight-bol);
   color:var(--black-color);
 }
 

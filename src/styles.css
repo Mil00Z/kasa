@@ -22,7 +22,8 @@
   --weight-bold:700;
 
   --title-font-family:var(--body-font-family);
-  --title-font-size:2rem;
+  --title-font-size:1.15rem;
+  --line-height:1.4;
   
   --cta-button-font-size:1.2rem;
   --cta-button-color:var(--white-color);
@@ -42,7 +43,7 @@
 
   body {
     --layout:"Desk";
-    --skeleton:1240px;
+    --skeleton:90%;
     font-family:var(--body-font-family);
     font-size:var(--body-font-size);
     font-weight:var(--body-font-weight);
@@ -134,75 +135,186 @@ button:focus-visible {
 
 
 
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-
-
-
-
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-
-
 /* MEDIA QUERIES */
-@media all and (min-width:1300px){
-  body {
-    --layout:"Large-Desk";
-    --skeleton:90%;
-  }
-}
 
-@media all and (max-width:1000px){
+@media all and (max-width:1100px){
+
   body {
     --layout:"Tab";
-    --skeleton:960px;
+    --skeleton:90%;
   }
+
+  /* NAV */
+  .nav-link {
+    font-size: .9rem;
+  }
+
+  .nav-link:nth-of-type(2) {
+    display: none;
+  }
+
+  /* HERO */
+  .content-first .hero .title {
+    font-size: 2rem;
+  }
+
+   /* HOME */
+   .content-first .card {
+    --sizes:290px;
+  }
+
+  .content-first .card-description {
+    font-size:1.05rem;
+ }
+
 }
 
 
 @media all and (max-width:600px){
+
+  :root{
+    --line-height:1.15;
+    --title-font-size:1.15rem;
+  }
+
   body {
     --layout:"Mobile";
-    --skeleton:100%;
+    --skeleton:90%;
   }
+
+  /* HEADER */
+  .banner-header img{
+    max-width:60%;
+  }
+
+  /* NAV */
+  /* .nav-link {
+    font-size: .9rem;
+  } */
+
+  /* .nav-link:nth-of-type(2) {
+    display: none;
+  } */
+
+  /* HERO */
+  .content-first .hero {
+    --radius:10px;
+    height:130px;
+  }
+
+  .content-first .hero .title {
+    font-size: 1.15rem;
+  }
+
+  /* HOME */
+  .content-first .listing-container {
+    justify-content: center;
+  }
+
+  .content-first .card-description {
+    font-size:1.2rem;
+ }
+
+  
+  /* FOOTER */
+  .banner-footer{
+    padding-block:4rem;
+  }
+
+  .copyright {
+    font-size: .8rem;
+  }
+
+  /* ANNONCE */
+  .logement .product-name{
+    font-size:1.25rem;
+  }
+
+  .logement .product-name.is-booked{
+    font-size:.875rem;
+  }
+
+  .logement .product-location{
+    margin-top:.75rem;
+    font-size:.95rem;
+  }
+
+  .logement .tag {
+    font-size:.625rem;
+  }
+
+  .logement .fa-star{
+    font-size:1rem;
+  }
+
+  .logement .side-right {
+    width: 100%;
+    justify-content: space-between;
+    flex-flow:row-reverse;
+  }
+
+  .logement .star {
+    align-self: center;
+  }
+
+  .logement .side-bottom {
+     flex-wrap: wrap;
+  }
+
+  .logement .product-name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logement .product-panel {
+    margin-bottom: calc(2 * var(--padding-tube));
+  }
+
+  .logement .product-owner{
+    font-size:.813rem;
+  }
+
+  .logement .product-owner .thumbnail{
+    --sizes:45px;
+  }
+
+
+  /* TUBE */
+  .content-first .tube {
+    width:100%;
+  }
+
+  .content-first .tube > .title {
+    --padding-tube:.35rem;
+    font-size:.813rem;
+  }
+
+  .content-first .tube .panel-container {
+    --extraSpacing:2rem;
+    font-size:.813rem;
+  }
+
+  .content-first .tube .title > i {
+    font-size:1.5rem;
+  }
+
+  /* 404 */
+  .content-first .not-found-container {
+    --gap:4rem;
+    margin-top: var(--gap);
+  }
+  .content-first .not-found-container .title {
+    font-size:8rem;
+  }
+
+  .content-first .not-found-container .description {
+    font-size: 1.25rem;
+    text-align: center;
+    text-wrap:balance;
+  }
+
+  .content-first .not-found-container .link {
+    font-size:1rem;
+  }
+
 }

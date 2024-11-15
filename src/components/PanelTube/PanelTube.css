@@ -10,7 +10,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-block:0 var(--padding-tube);
+  margin-block:0;
   padding: var(--padding-tube);
   font-size:1.125rem;
   font-weight:var(--weight-bold);
@@ -37,14 +37,30 @@
 }
 
 .panel-container{ 
-  max-height:0;
+  --extraSpacing:3rem;
+  /* max-height:0; */
+  height:0;
+  display: flex;
+  align-items: center;
   /* margin-block:.5rem; */
   margin-block:0;
   font-size:1.125rem;
   color:var(--black-color);
   padding-inline:var(--padding-tube);
   overflow: hidden;
-  transition: max-height .33s ease-in-out;
+  /* transition: max-height .33s ease-in-out; */
+  transition: height .33s ease-in-out;
+}
+
+/* Spec for list */
+ul.panel-container {
+  --extraSpacing:3.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.panel-container li {
 }
 
 /* .panel-container .content {
@@ -59,7 +75,8 @@
 }
 
 .tube.reversed > .panel-container {
- max-height:var(--max-height);
+ /* max-height:var(--max-height); */
+  height:calc(var(--max-height) + var(--extraSpacing));
 }
 
 .tube.reversed .title > i  {
@@ -68,8 +85,7 @@
 
 
 .soft-skill {
-  margin:2rem auto;
-  width:65%;
+  width:80%;
   /* text-align: center; */
   font-size:1.2rem;
   transition: var(--regTransi);
