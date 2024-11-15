@@ -4,7 +4,7 @@ import logements from '@data/logements.json';
 import Header from "@components/Header/Header"
 import Footer from "@components/Footer/Footer"
 
-import '@root/styles.css'
+import '@root/styles/main.scss'
 
 const Root = () => {
 

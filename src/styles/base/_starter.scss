@@ -1,0 +1,186 @@
+:root {
+
+  //Colors
+  @each $color-name, $color-value in $colors {
+    --#{$color-name}:#{$color-value};
+  }
+
+  //Fonts
+   @each $font-setting, $font-value in $fonts {
+    --#{$font-setting}:#{$font-value};
+  }
+
+  //Items
+  @each $item-name, $item-value in $items {
+    --#{$item-name}:#{$item-value};
+  }
+ 
+}
+
+  body {
+    --layout:"Desk";
+    --skeleton:1240px;
+    font-family:var(--body-font-family);
+    font-size:var(--body-font-size);
+    font-weight:var(--body-font-weight);
+    margin: 0;
+    padding: 0;
+    background-color: var(--white-color);
+  }
+
+  #root{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+a {
+  text-decoration: unset;
+  transition: var(--regTransi);
+}
+
+a:hover {
+  color: var(--third-color);
+}
+
+.skeleton{
+  width:var(--skeleton);
+  margin: 0 auto;
+  /* display: flex;
+  flex-direction: column;
+  height:100dvh; */
+}
+
+.content-first {
+  margin-block:auto
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.debeug {
+  outline:4px dotted var(--debeug-color);
+}
+
+.debeug-alt {
+  outline:2px dashed var(--debeug-color-alt);
+}
+
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: var(--radius);
+  border: 1px solid transparent;
+  padding: 0.5rem 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition:var(--regTransi);
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+.btn-cta{
+  width:fit-content;
+  background-color: var(--third-color);
+  color:var(--white-color);
+  transition: var(--regTransi);
+}
+
+.btn-cta:hover {
+  /* width:150px; */
+  border-color: currentColor;
+  background:var(--black-color)
+}
+
+
+
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+
+
+
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+
+
+/* MEDIA QUERIES */
+@media all and (min-width:1300px){
+  body {
+    --layout:"Desk-xl";
+    --skeleton:#{map-get($responsive-bk,'desk')};
+  }
+}
+
+@media all and (max-width:1000px){
+  body {
+    --layout:"Tab";
+    --skeleton:960px;
+  }
+}
+
+
+@media all and (max-width:600px){
+  body {
+    --layout:"Mobile";
+    --skeleton:#{map-get($responsive-bk,'mobile')};
+  }
+}
