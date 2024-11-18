@@ -1,5 +1,6 @@
-:root {
+@use './_variables.scss' as *;
 
+:root {
   //Colors
   @each $color-name, $color-value in $colors {
     --#{$color-name}:#{$color-value};
@@ -13,6 +14,11 @@
   //Items
   @each $item-name, $item-value in $items {
     --#{$item-name}:#{$item-value};
+  }
+
+   //Bk
+   @each $bk-name, $bk-value in $breakpoints {
+    --#{$bk-name}:#{$bk-value};
   }
  
 }
@@ -112,56 +118,6 @@ button:focus-visible {
 
 
 
-
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-
-
-
-
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-
-
 /* MEDIA QUERIES */
 @media all and (min-width:1300px){
   body {
@@ -170,7 +126,7 @@ button:focus-visible {
   }
 }
 
-@media all and (max-width:1000px){
+@media all and (max-width:1100px){
   body {
     --layout:"Tab";
     --skeleton:960px;
@@ -184,3 +140,4 @@ button:focus-visible {
     --skeleton:#{map-get($responsive-bk,'mobile')};
   }
 }
+

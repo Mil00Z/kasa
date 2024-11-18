@@ -1,4 +1,4 @@
-@import 'variables';
-@import 'resets';
-@import 'starter';
+@forward './_variables.scss';
+@forward './_resets.scss';
+@forward './_starter.scss';
 
