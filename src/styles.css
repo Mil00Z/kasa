@@ -1,6 +1,6 @@
 /* MEDIA QUERIES */
 
-@media all and (max-width:1100px){
+/* @media all and (max-width:1100px){
 
   body {
     --layout:"Tab";
@@ -30,9 +30,9 @@
     font-size:1.05rem;
  }
 
-}
+} */
 
-
+/* 
 @media all and (max-width:600px){
 
   :root{
@@ -40,10 +40,7 @@
     --title-font-size:1.15rem;
   }
 
-  body {
-    --layout:"Mobile";
-    --skeleton:90%;
-  }
+ 
 
   /* HEADER */
   .banner-header img{
@@ -180,4 +177,4 @@
     font-size:1rem;
   }
 
-}
+} */
