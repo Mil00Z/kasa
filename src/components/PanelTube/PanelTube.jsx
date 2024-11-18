@@ -1,5 +1,5 @@
 import { useRef,useEffect } from 'react'
-import './PanelTube.css'
+import '@styles/components/PanelTube.scss'
 
 const PanelTube = (props) => {
 

@@ -1,8 +1,8 @@
 import { useState,useEffect,useRef } from 'react';
 
 import Fade from '@components/utils/fade.jsx';
-import '@components/Hero/Hero.css';
-import '@components/Gallery/Gallery.css';
+// import '@components/Hero/Hero.css';
+import '@styles/components/Gallery.scss';
 
 const Gallery = (props) => {
 

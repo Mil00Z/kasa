@@ -1,6 +1,7 @@
 import Notes from '@components/Notes/Notes';
 import PanelTube from '@components/PanelTube/PanelTube';
-import './Product.css';
+
+import '@styles/components/Product.scss';
 
 
 const Product = (props) => {

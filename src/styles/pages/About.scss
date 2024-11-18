@@ -1,7 +1,6 @@
-/* general Page Class */
+
 .about{
   --location:"about";
-
 }
 
 
@@ -9,6 +8,7 @@
   display: flex;
   justify-content: space-between;
   margin-block:2rem;
+
 }
 
 .side {
@@ -32,6 +32,5 @@
 }
 
 .side-prez {
-
   color:var(--black-color);
 }

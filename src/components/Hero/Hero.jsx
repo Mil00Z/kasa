@@ -2,7 +2,7 @@ import heroBg from '@assets/hero-background.jpg'
 import heroOtherBg from '@assets/hero-annonce-background.jpg'
 import heroAboutBg from '@assets/hero-about-background.jpg'
 
-import './Hero.css'
+import '@styles/components/Hero.scss'
 
 const HeroBanner = (props) => {
 

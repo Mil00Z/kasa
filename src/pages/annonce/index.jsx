@@ -5,7 +5,7 @@ import HeroBanner from "@components/Hero/Hero"
 import Gallery from "@components/Gallery/Gallery"
 import Product from "@components/Product/Product"
 
-import '@pages/annonce/annonce.css'
+import '@styles/pages/Annonce.scss'
 
 
 const Annonce = () => {

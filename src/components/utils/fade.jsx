@@ -1,5 +1,4 @@
 
-
 const Fade = (props) => {
 
   const {isVisible} = props;

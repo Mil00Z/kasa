@@ -1,5 +1,5 @@
 import altLogo from '../../assets/kasa-alt-logo.svg'
-import './Footer.css';
+
 
 const Footer = () => {
   return (

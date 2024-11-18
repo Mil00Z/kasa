@@ -3,7 +3,7 @@ import {useOutletContext} from 'react-router-dom'
 
 import Card from '@components/Card/Card';
 
-import './Listing.css'
+import '@styles/components/Listing.scss'
 
 const Listing = () => {
 

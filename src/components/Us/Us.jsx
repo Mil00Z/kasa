@@ -1,6 +1,7 @@
 import PanelTube from "@components/PanelTube/PanelTube"
 import Form from '@components/Form/Form'
-import './us.css'
+
+import '@styles/components/Us.scss'
 
 const Us = () =>{
 
@@ -27,6 +28,7 @@ const Us = () =>{
     }
   ];
 
+  
   return (
     <section className="us">
       
