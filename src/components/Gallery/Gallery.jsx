@@ -6,12 +6,12 @@ import '@components/Gallery/Gallery.css';
 
 const Gallery = (props) => {
 
-  const {layout, details = null} = props
+  const {details = null} = props
 
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
   const [isVisible, setVisible] = useState(true);
 
-  const imageRef = useRef(null);
+  // const imageRef = useRef(null);
 
   let pictures = details?.pictures || [];
 
@@ -47,11 +47,12 @@ const Gallery = (props) => {
   }
 
 
-  useEffect(() => { 
+  //Testing Effect for Assets
+  // useEffect(() => { 
 
-    //  imageRef.current.classList.toggle('pschit');
+  //    imageRef.current.classList.toggle('pschit');
 
-  },[currentImgIndex])
+  // },[currentImgIndex]);
   
 
 
@@ -60,17 +61,17 @@ return (
   <section className="gallery">
   
     <div className="nav-pictures">
-      <span className="nav-icon left" onClick={() => goBack()}>Left</span>
-      <span className="nav-icon right" onClick={() => goAhead()}>Right</span>
+      <span className="nav-icon left" onClick={() => goBack()}><i className="fa-solid fa-angle-left"></i></span>
+      <span className="nav-icon right" onClick={() => goAhead()}><i className="fa-solid fa-angle-right"></i></span>
     </div>
     
-    <Fade isVisible={isVisible}>
+    <Fade isVisible={isVisible}> 
 
       <img key={`picture-${currentImgIndex}`} src={pictures[currentImgIndex]} className={`picture`} data-index={currentImgIndex} alt={`photo de l'annonce - ${details.title}`} /> 
 
     </Fade>
       
-    <div className="nav-counter"> <span className="counter">{currentImgIndex}</span>/{pictures.length - 1}</div>
+    <div className="nav-counter"> <span className="counter">{currentImgIndex + 1}</span>/{pictures.length}</div>
 
   </section>
 

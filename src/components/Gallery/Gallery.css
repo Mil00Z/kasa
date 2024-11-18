@@ -36,21 +36,24 @@
   top:50%;
   transform: translateY(-50%);
 }
-.nav-icon {
-  width: var(--sizesIcons);
+
+
+.nav-icon > .fa-solid {
+  /* width: var(--sizesIcons);
   height:var(--sizesIcons);
   display:flex;
   justify-content: center;
   align-items: center;
   padding:.5rem;
-  background:var(--third-color);
-  color:var(--white-color);
+  background:var(--third-color);*/
+  font-size:5rem;
+  color:var(--white-color); 
   border-radius: 50%; 
   cursor: pointer;
 }
 
 .nav-counter {
-  --op:.25;
+  --op:.5;
   position: absolute;
   bottom:-14px;
   display: flex;

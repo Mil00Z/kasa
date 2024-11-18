@@ -1,5 +1,5 @@
 .tube {
-  --padding-tube:.85rem;
+  --padding-tube:.55rem;
   color:var(--white-color);
   border-radius:var(--radius);
   background-color: #F6F6F6;
@@ -37,7 +37,7 @@
 }
 
 .panel-container{ 
-  --extraSpacing:3rem;
+  --extraSpacing:4rem;
   /* max-height:0; */
   height:0;
   display: flex;
@@ -54,21 +54,11 @@
 
 /* Spec for list */
 ul.panel-container {
-  --extraSpacing:3.5rem;
+  --extraSpacing:4rem;
   flex-direction: column;
   justify-content: center;
   align-items: start;
 }
-
-.panel-container li {
-}
-
-/* .panel-container .content {
-  margin-block:0;
-  font-size:1.125rem;
-  color:var(--black-color);
-  padding:var(--padding-tube);
-} */
 
 .tube:hover{
   cursor:pointer;
