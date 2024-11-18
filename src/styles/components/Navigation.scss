@@ -12,26 +12,29 @@
   font-weight:var(--weight-medium);
   text-transform: uppercase;
   position: relative;
-}
 
-.nav-link:hover,
-.nav-link:is(.active) {
-  color: var(--third-color);
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-}
-.nav-link:is(.active):hover::after {
-  opacity: 1;
-}
+  
+  &:hover,
+  &.active {
+    color: var(--third-color);
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
 
-.nav-link:is(.active)::after {
-  content: "fumier";
-  position: absolute;
-  bottom: 150%;
-  left: 0;
-  display: block;
-  opacity: 0;
-  font-size:.8rem;
-  color:var(--debeug-color);
-  /* outline: 4px dotted var(--debeug-color); */
+    &::after{
+      opacity: 1;
+    }
+
+    &::after{ 
+      content: "fumier";
+      position: absolute;
+      bottom: 150%;
+      left: 0;
+      display: block;
+      opacity: 0;
+      font-size:.8rem;
+      color:var(--debeug-color);
+    }
+
+  }
+
 }

@@ -7,27 +7,29 @@
   align-items: center;
   color:var(--primary-color);
   row-gap: var(--gap);
-}
 
-.not-found-container .title{
-  font-size: 18rem;
-  font-weight: var(--weight-bold);
-  margin-block:0;
-}
+  .title{
+    font-size: 18rem;
+    font-weight: var(--weight-bold);
+    margin-block:0;
+  }
 
-.not-found-container .description {
-  font-size: 2.25rem;
-  font-weight:var(--weight-medium);
-}
+  .description {
+    font-size: 2.25rem;
+    font-weight:var(--weight-medium);
+  }
 
-.not-found-container .link {
-  font-size:1.125rem;
-  font-weight:var(--weight-medium);
-  color:var(--black-color);
-  margin-bottom: var(--gap);
-  text-decoration: underline;
-}
-.not-found-container .link:hover {
+  .link {
+    font-size:1.125rem;
+    font-weight:var(--weight-medium);
+    color:var(--black-color);
+    margin-bottom: var(--gap);
+    text-decoration: underline;
 
-color:var(--secondary-color);
+    &:hover { 
+    color:var(--secondary-color);
+    }
+  
+  }
+
 }

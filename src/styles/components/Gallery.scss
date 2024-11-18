@@ -16,13 +16,14 @@
   height: 100%;
   object-fit: cover;
   opacity: var(--op);
-  /* transition: opacity .12s ease-in-out; */
+  transition: opacity .12s ease-in-out; 
+
+  &.pschit {
+    --op:0;
+  }
 }
 
-.picture.pschit {
-  --op:0;
-  opacity: 0;
-}
+
 
 .nav-pictures {
   --sizesIcons:50px;
@@ -61,9 +62,11 @@
   padding:1rem;
   background: rgba(255, 255, 255, var(--op));
   color:var(--white-color);
-  font-size:1.25rem;
+  font :{
+    size:1.25rem;
+    weight:var(--weight-bold);
+  }
   border-radius: var(--radius);
-  font-weight:var(--weight-bold);
 }
 
 .counter {
@@ -71,6 +74,7 @@
   color:var(--third-color);
 }
 
+//Effects//
 .fade {
   width: 100%;
   transition:var(--regTransi)

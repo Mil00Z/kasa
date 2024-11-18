@@ -1,40 +1,80 @@
-.logement-details{
-  --radius:11px;
-  margin-block:1.5rem;
-}
 
 .logement{
   display:flex;
   flex-wrap: wrap;
   justify-content: space-between;
   color:var(--black-color);
+
+  &-details {
+    --radius:11px;
+    margin-block:1.5rem;
+  }
+
+  &-not-found {
+    margin-block:3rem;
+
+    .title {
+      margin-block:1rem;
+      font-size:1.5rem;
+      font-weight: var(--weight-bol);
+      color:var(--black-color);
+    }
+
+    .description {
+      font-size:1.125rem;
+      color:var(--black-color);
+
+      & > a {
+        color:var(--black-color)
+      }
+    }
+    
+  }
+
+  .is-booked{
+    font-size:1rem;
+    color:var(--black-color)
+  }
 }
 
-.logement .is-booked{
-  font-size:1rem;
-  color:var(--black-color)
+
+.product {
+
+  &-name{
+    margin-block:0;
+    font-size:2rem;
+    font-weight:var(--weight-medium);
+    color:var(--primary-color);
+  }
+
+  &-location {
+    display: inline-block;
+    font-size:1.125rem;
+    font-weight: var(--weight-medium);
+    color:var(--black-color)
+  }
+
+  &-tags{
+    display: flex;
+    column-gap: 1rem;
+    margin-top: .9rem;
+  }
+
+  &-owner {
+    --gap:2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    column-gap: var(--gap);
+    margin-block:0;
+    font-weight: var(--weight-medium);
+    color:var(--primary-color);
+  }
+  
+  
 }
 
-.product-name{
-  margin-block:0;
-  font-size:2rem;
-  font-weight:var(--weight-medium);
-  color:var(--primary-color);
-}
 
-
-.product-location {
-  display: inline-block;
-  font-size:1.125rem;
-  font-weight: var(--weight-medium);
-  color:var(--black-color)
-}
-
-.product-tags{
-  display: flex;
-  column-gap: 1rem;
-  margin-top: .9rem;
-}
 
 .tag{
 width:fit-content;
@@ -47,18 +87,7 @@ border-radius:var(--radius) ;
 
 }
 
-.product-owner {
-  --gap:2rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  column-gap: var(--gap);
-  margin-block:0;
-  font-weight: var(--weight-medium);
-  color:var(--primary-color);
-}
-
-.product-owner .thumbnail {
+.thumbnail {
   --sizes:65px;
   width:var(--sizes);
   height:var(--sizes);
@@ -69,16 +98,21 @@ border-radius:var(--radius) ;
   display:flex;
   flex-direction: column;
 
+  &-right{
+    display:flex;
+    flex-direction: column;
+  }
+
+  &-bottom {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-block: 1.5rem;
+  }
+
 }
 
-.side-right{
-  display: flex;
-  flex-direction: column;
-}
-
-.side-left{
-
-}
 
 .star{
   align-self: flex-end;
@@ -89,48 +123,15 @@ border-radius:var(--radius) ;
   margin-inline:.25rem;
   color:var(--star-default-color);
   font-size:1.5rem;
+
+  &.noted {
+    color:var(--primary-color);
+  }
 }
 
-.fa-star.noted{
-
-  color:var(--primary-color);
-}
-
-.side-bottom {
-  width:100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-block: 1.5rem;
-}
-
-
-.logement-not-found {
-  margin-block:3rem;
-}
-
-.logement-not-found .title {
-  margin-block:1rem;
-  font-size:1.5rem;
-  font-weight: var(--weight-bol);
-  color:var(--black-color);
-}
-
-.logement-not-found .description {
-  font-size:1.125rem;
-  color:var(--black-color)
-}
-
-.logement-not-found .description> a {
-
-  color:var(--black-color)
-}
-
-.special{
+.link-special{
+  font-size:1.75rem;
   color:var(--third-color);
+  font-weight: var(--weight-medium);
 }
 
-.btn-cta.booked{
-  background:var(--grey-color);
-  cursor:not-allowed
-}
