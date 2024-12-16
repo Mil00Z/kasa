@@ -13,8 +13,9 @@ const Gallery = (props) => {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
   const [isVisible, setVisible] = useState(true);
 
-
+  
   let pictures = details?.pictures || [];
+
 
 
   function goAhead() {
@@ -53,20 +54,26 @@ const Gallery = (props) => {
 return (
 
   <section className="gallery">
-  
-    <div className="nav-pictures">
-      <span className="nav-icon left" onClick={() => goBack()}><i className="fa-solid fa-angle-left"></i></span>
-      <span className="nav-icon right" onClick={() => goAhead()}><i className="fa-solid fa-angle-right"></i></span>
-    </div>
-    
+
+    {(pictures.length > 1) ? ( 
+       
+        <div className="nav-pictures">
+          <span className="nav-icon left" onClick={() => goBack()}>
+          <i className="fa-solid fa-angle-left"></i></span>
+          <span className="nav-icon right" onClick={() => goAhead()}><i className="fa-solid fa-angle-right"></i></span>
+        </div>
+      ) : null}
+      
     <Fade isVisible={isVisible}> 
 
       <img key={`picture-${currentImgIndex}`} src={pictures[currentImgIndex]} className={`picture`} data-index={currentImgIndex} alt={`photo de l'annonce - ${details.title}`} /> 
 
     </Fade>
-      
-    <div className="nav-counter"> <span className="counter">{currentImgIndex + 1}</span>/{pictures.length}</div>
-
+    
+    {(pictures.length >1) ? (
+       <div className="nav-counter"> <span className="counter">{currentImgIndex + 1}</span>/{pictures.length}</div>
+    ) : null}
+   
   </section>
 
 )
