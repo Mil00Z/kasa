@@ -9,9 +9,7 @@ const HeroBanner = (props) => {
   const {layout, details = null} = props
 
 
-  // Display Background Switching Pages Loaded
-  let ArrayAsset = [heroBg,heroOtherBg,heroAboutBg];
-
+  //Changing BG in function of layout
   let currentBg;
 
   switch(layout) {
@@ -30,6 +28,7 @@ const HeroBanner = (props) => {
     default:
       currentBg = heroBg
   }
+  
 
   return (
 

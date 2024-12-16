@@ -14,9 +14,6 @@ const Annonce = () => {
 
   let getParams = useParams();
 
-  //Testing Injection on ONE logement
-  // let details = logements[2];
-
   //Get ALl datas and dispatch good url Product
   let details = logements.find((logement)=> {
 
@@ -24,8 +21,10 @@ const Annonce = () => {
 
   })
   
+
   let annoncePanel = true ;
 
+  
   return (
 
     details ? 

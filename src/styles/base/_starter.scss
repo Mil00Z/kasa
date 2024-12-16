@@ -131,6 +131,7 @@ h1 {
 
 
 @media all and (max-width:600px){
+  
   body {
     --layout:"Mobile";
     --skeleton:#{map-get($responsive-bk,'mobile')};

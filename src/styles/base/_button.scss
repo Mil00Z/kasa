@@ -52,7 +52,6 @@
     &.booked{
       
       &[disabled]{
-        // color:var(--black-color);
         text-decoration: line-through;
         background: var(--grey-color);
         cursor: not-allowed;

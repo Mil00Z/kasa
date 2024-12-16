@@ -31,7 +31,6 @@
   &.reversed {
 
     .panel-container {
-      /* max-height:var(--max-height); */
        height:calc(var(--max-height) + var(--extraSpacing));
      }
 
@@ -59,17 +58,14 @@
 
 .panel-container{ 
   --extraSpacing:4rem;
-  /* max-height:0; */
   height:0;
   display: flex;
   align-items: center;
-  /* margin-block:.5rem; */
   margin-block:0;
   font-size:1.125rem;
   color:var(--black-color);
   padding-inline:var(--padding-tube);
   overflow: hidden;
-  /* transition: max-height .33s ease-in-out; */
   transition: height .33s ease-in-out;
 
   ul  & {

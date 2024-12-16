@@ -16,8 +16,6 @@ function handleClick(event) {
   let container = targetClass.querySelector('.panel-container');
 
  
-  // contentRef.current = container ;
-
   // Shorthand to check existence
   if (targetClass && container) {
 
@@ -29,8 +27,9 @@ function handleClick(event) {
 
   }
 
- 
 }
+
+
 
   return (
     annoncePanel ? (

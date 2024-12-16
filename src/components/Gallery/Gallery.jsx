@@ -1,8 +1,10 @@
 import { useState,useEffect,useRef } from 'react';
 
 import Fade from '@components/utils/fade.jsx';
-// import '@components/Hero/Hero.css';
+
 import '@styles/components/Gallery.scss';
+
+
 
 const Gallery = (props) => {
 
@@ -11,7 +13,6 @@ const Gallery = (props) => {
   const [currentImgIndex, setCurrentImgIndex] = useState(0);
   const [isVisible, setVisible] = useState(true);
 
-  // const imageRef = useRef(null);
 
   let pictures = details?.pictures || [];
 
@@ -31,6 +32,7 @@ const Gallery = (props) => {
     setVisible(isVisible => !isVisible)
   }
 
+
   function goBack() {
 
     if (currentImgIndex <= 0 ) {
@@ -47,15 +49,7 @@ const Gallery = (props) => {
   }
 
 
-  //Testing Effect for Assets
-  // useEffect(() => { 
-
-  //    imageRef.current.classList.toggle('pschit');
-
-  // },[currentImgIndex]);
-  
-
-
+ 
 return (
 
   <section className="gallery">
