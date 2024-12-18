@@ -105,13 +105,15 @@ h1 {
   }
 
   /* NAV */
-  .nav-link {
-    font-size: .9rem;
+  .main-nav {
+    width:50%;
   }
 
-  .nav-link:nth-of-type(2) {
-    display: none;
+  .nav-link {
+    font-size: .85rem;
   }
+
+
 
   /* HERO */
   .content-first .hero .title {
@@ -121,11 +123,31 @@ h1 {
    /* HOME */
    .content-first .card {
     --sizes:290px;
+   
+    .card-title {
+      --title-font-size:1.125rem;
+      text-wrap: balance;
+    }
+
   }
 
   .content-first .card-description {
     font-size:1.05rem;
  }
+
+  .content-first .listing-section {
+    --gap:1rem;
+  }
+
+  .content-first .listing-title {
+    font-size: 1rem;
+    text-wrap: balance;
+
+    .free-spaces {
+      font-size: 1.2rem;
+    }
+  }
+
 
 }
 
@@ -145,18 +167,26 @@ h1 {
  
 
   /* HEADER */
-  .banner-header img{
-    max-width:60%;
+  #header{
+    padding-block:1.5rem;
   }
 
-  /* NAV */
-  /* .nav-link {
-    font-size: .9rem;
-  } */
+  .main-nav {
+    width: 50%;
+  }
 
-  /* .nav-link:nth-of-type(2) {
-    display: none;
-  } */
+  .banner-header a {
+    width:40%;
+  }
+  .banner-header img{
+    max-width:100%;
+    height:auto;
+  }
+
+ 
+  .main-nav {
+    --gap:1.5rem;
+  }
 
   /* HERO */
   .content-first .hero {
@@ -165,7 +195,9 @@ h1 {
   }
 
   .content-first .hero .title {
-    font-size: 1.15rem;
+    padding-inline: 1rem;
+    font-size: 1.5rem;
+    text-wrap: balance;
   }
 
   /* HOME */
@@ -174,7 +206,8 @@ h1 {
   }
 
   .content-first .card-description {
-    font-size:1.2rem;
+    font-size:1rem;
+    line-height: 1.25;
  }
 
   
@@ -184,10 +217,16 @@ h1 {
   }
 
   .copyright {
-    font-size: .8rem;
+    font-size: 0.875rem;
   }
 
   /* ANNONCE */
+  .gallery .nav-icon > i {
+    font-size:2.25rem;
+
+  }
+
+
   .logement .product-name{
     font-size:1.25rem;
   }
@@ -202,7 +241,7 @@ h1 {
   }
 
   .logement .tag {
-    font-size:.625rem;
+    font-size:.7rem;
   }
 
   .logement .fa-star{
@@ -247,13 +286,13 @@ h1 {
   }
 
   .content-first .tube > .title {
-    --padding-tube:.35rem;
+    --padding-tube:.55rem;
     font-size:.813rem;
   }
 
   .content-first .tube .panel-container {
     --extraSpacing:2rem;
-    font-size:.813rem;
+    font-size:.9rem;
   }
 
   .content-first .tube .title > i {
@@ -280,4 +319,5 @@ h1 {
   }
 
 }
+
 
